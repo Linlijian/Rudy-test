@@ -1,19 +1,18 @@
 class THCuster
-    vowels =  ['ะ','า','ิ','ี','ึ','ื','ุ','ู','ะ','เ','แ','โ','ใ','ไ','ๆ','ำ','ๅ','ั','่','๋','้',' ็','๊']
-    # up = ['่','๋','ั','๊','็','์']
-    up = ['่','้','๊','๋']
-
     def initialize(str)
         @str = str
     end
 
     def THConvert
+           vowels =  ['ะ','า','ิ','ี','ึ','ื','ุ','ู','ะ','เ','แ','โ','ใ','ไ','ๆ','ำ','ๅ','ั','่','๋','้',' ็','๊']
+    # up = ['่','๋','ั','๊','็','์']
+    @up = ['่','้','๊','๋']
+
         nstr = []
         i,j,key = 0,0,0
-        while i < str.length do
-            puts str[i]
-            while j <  vowels.length do
-                 if str[i]==vowels[j]
+        while i < @str.length do
+            while j < vowels.length do
+                 if @str[i]==vowels[j]
                      nstr.push(0)
                      k=1
                      break
@@ -30,9 +29,10 @@ class THCuster
     end
 
     def THTokenizer
-        thaitoken = THConvert
+       thaitoken = THConvert()
         result = []
         i = 0
+        chevk = 0
         while i<thaitoken.length do
             if thaitoken[i] == 1 && thaitoken[i+1] == 1 
                 result.push(@str[i])
@@ -63,13 +63,21 @@ class THCuster
                     i+=4
                 end
             end
-            if i+1 = nil
+            chevk = i+1
+            if chevk == nil
                 result.push(@str[i])
                 i+=1
             end
         end
+        puts result
+        return result
     end
-
-
-
 end
+
+s ="ไม่เข้าใจ"
+test = THCuster.new(s)
+test.THTokenizer
+
+
+
+
