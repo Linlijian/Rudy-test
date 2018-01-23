@@ -10,10 +10,12 @@ require 'matrix'
 
 # n=Matrix.build(100, 100) {|row, col| rand(0..10)} * Matrix.build(100, 100) {|row, col| rand(0..10)}
 
-# a = 'ไม่ตั้งใจเรียนนะเราอะ'
-  a='จึงเรียนมาเพื่อทราบ'.split(//)
-#  puts a='จึงเรียนมาเพื่อทราบ' + "asd".slice!(2)
-puts a[3]
+# # a = 'ไม่ตั้งใจเรียนนะเราอะ'
+#   a='จึงเรียนมาเพื่อทราบ'.split(//)
+#   nstr =[]
+# #  puts a='จึงเรียนมาเพื่อทราบ' + "asd".slice!(2)
+# puts  nstr
+
 
 # strLength = a.length
 # for i in 1..strLength
@@ -34,7 +36,7 @@ puts a[3]
 
 
 
-# shot = ['ะ','า','ุ','ู','ิ','ี','์','ึ','เ','แ','อ','ใ','ไ','ำ','ๅ','โ']
+# shot = ['ะ','า','ุ','ู','ิ','ี','์','ึ','เ','แ','อ','ใ','ไ','ำ','ๅ','โ','่','๋','ั','๊','็','์','ๆ']
 # long = ['่','๋','ั','๊','็','์','ๆ']
 
 
@@ -56,3 +58,21 @@ puts a[3]
 
 # puts custer.to_s
 
+vowels = ['ะ','า','ุ','ู','ิ','ี','์','ึ','เ','แ','อ','ใ','ไ','ำ','ๅ','โ','ๆ']
+str = "เอ"
+i=0
+while i < str.length do
+if str != vowels
+     puts ('T')
+end
+i+=1
+end
+
+def test
+    i = 100
+    j = 200
+    k = 300
+ return i, j, k
+ end
+ var = test
+ puts var
