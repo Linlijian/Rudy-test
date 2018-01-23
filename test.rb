@@ -25,7 +25,15 @@ strLength = a.length
 #     j=0
 # end
 
-for i in 0..21
-    puts a[i,21]
- end
+# for i in 0..21
+#     puts a[i,21]
+#  end
 
+puts "เพื่อ".length
+
+
+
+shot = ['ะ','า','ุ','ู','ิ','ี','์','ึ','เ','แ','อ','ใ','ไ','ำ','ๅ','โ']
+long = ['่','๋','ั','๊','็','์','ๆ']
+puts shot
+puts long
