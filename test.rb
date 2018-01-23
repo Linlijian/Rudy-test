@@ -82,3 +82,32 @@ r.insert(1,'ร')
 r.insert(1,'ั')
 r.insert(3,'ก')
  puts r.to_s
+
+
+
+
+#  nstr = []
+#  str = 'รักเดี่ยว'.to_s
+#  s = ["รักเด"]
+#  vowels = ['ะ','า','ิ','ี','ึ','ื',' ุ',' ู','ะ','เ','แ','โ','ใ','ไ','ๆ',' ำ','ๅ','ั']
+ 
+#         i = 0
+#         while i < str.length do
+#             if str[i] != vowels[i]
+#                 nstr.push(1)
+#             else
+#                 nstr.push(0)
+#             end
+#             i+=1
+#             puts i
+#         end
+        
+#  puts nstr
+ 
+#   str = 'รักเดี่ยว'.split(%r{\s*})
+ 
+ 
+ 
+ 
+ 
+ 

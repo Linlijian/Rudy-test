@@ -1,6 +1,7 @@
 class THCuster
-    vowels = ['ะ','า','ุ','ู','ิ','ี','์','ึ','เ','แ','อ','ใ','ไ','ำ','ๅ','โ','ๆ']
-    up = ['่','๋','ั','๊','็','์']
+    vowels =  ['ะ','า','ิ','ี','ึ','ื','ุ','ู','ะ','เ','แ','โ','ใ','ไ','ๆ','ำ','ๅ','ั','่','๋','้',' ็','๊']
+    # up = ['่','๋','ั','๊','็','์']
+    up = ['่','้','๊','๋']
 
     def initialize(str)
         @str = str
@@ -8,14 +9,22 @@ class THCuster
 
     def THConvert
         nstr = []
-        i = 0
-        while i < @str.length do
-            if @str != vowels
-                nstr.push(1)
-            else
-                nstr.push(0)
-            end
+        i,j,key = 0,0,0
+        while i < str.length do
+            puts str[i]
+            while j <  vowels.length do
+                 if str[i]==vowels[j]
+                     nstr.push(0)
+                     k=1
+                     break
+                 end
+                 j+=1
+             end
+             if k==0
+                 nstr.push(1)
+             end
             i+=1
+            j,k = 0,0
         end
         return nstr
     end
@@ -30,7 +39,7 @@ class THCuster
                 i+=1
             elsif thaitoken[i] == 1 && thaitoken[i+1] == 0
                 if thaitoken[i+2] == 0
-                    if thaitoken[i+2] == vowels
+                    if thaitoken[i+2] == up #vowels
                         result.push(@str[i..i+3])
                         i+=3
                     else
@@ -50,10 +59,7 @@ class THCuster
                 j += 1
                 i = j
                 if thaitoken[j] == 1
-                    result.push(@str[i])
-                    result.push(@str[i+1])
-                    result.push(@str[i+2])
-                    result.push(@str[i+3])
+                    result.push(@str[i..i+4])
                     i+=4
                 end
             end
@@ -64,9 +70,6 @@ class THCuster
         end
     end
 
-    def oneConvert
-        oneStr = THConvert
-        if oneStr
-        end
-    end
 
+
+end
