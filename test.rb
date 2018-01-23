@@ -75,4 +75,10 @@ def test
  return i, j, k
  end
  var = test
- puts var
+ puts var[0+1]
+
+ r = []
+r.insert(1,'ร')
+r.insert(1,'ั')
+r.insert(3,'ก')
+ puts r.to_s
