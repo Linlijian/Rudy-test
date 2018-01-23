@@ -1,4 +1,4 @@
-# encoding: UTF-8
+
 require 'matrix'
 # m = Matrix.build(10, 10) {|row, col| rand(0..10)}
 # puts m
@@ -11,10 +11,11 @@ require 'matrix'
 # n=Matrix.build(100, 100) {|row, col| rand(0..10)} * Matrix.build(100, 100) {|row, col| rand(0..10)}
 
 # a = 'ไม่ตั้งใจเรียนนะเราอะ'
-a='จึงเรียนมาเพื่อทราบ'
-i=1
-j=1
-strLength = a.length
+  a='จึงเรียนมาเพื่อทราบ'.split(//)
+#  puts a='จึงเรียนมาเพื่อทราบ' + "asd".slice!(2)
+puts a[3]
+
+# strLength = a.length
 # for i in 1..strLength
 #     for j in 1..strLength
 #         puts "#{i} , #{j}"
@@ -29,11 +30,29 @@ strLength = a.length
 #     puts a[i,21]
 #  end
 
-puts "เพื่อ".length
+# puts "เพื่อ".length
 
 
 
-shot = ['ะ','า','ุ','ู','ิ','ี','์','ึ','เ','แ','อ','ใ','ไ','ำ','ๅ','โ']
-long = ['่','๋','ั','๊','็','์','ๆ']
-puts shot
-puts long
+# shot = ['ะ','า','ุ','ู','ิ','ี','์','ึ','เ','แ','อ','ใ','ไ','ำ','ๅ','โ']
+# long = ['่','๋','ั','๊','็','์','ๆ']
+
+
+# i,j,k =0,0,0
+# str = "เพื่อ"
+# custer = []
+# for i in 0..str.length do
+#     for j in 0..shot.length do
+#         if str[i] == shot[j]
+#              puts shot[j]
+#              puts i,j
+#              custer[k] = str[i+1]
+#              k+=1
+#         end
+#         j+=1
+#     end
+#     i+=1
+# end
+
+# puts custer.to_s
+
