@@ -95,10 +95,3 @@ class THCuster
         return b.to_s
     end
 end
-
-s="ไม่รุ้"
-test = THCuster.new(s)
-puts test.THConvert
-# puts test.THTokenizer
- puts test.getTHTokenizer
-#puts test.THTokenizer.length
